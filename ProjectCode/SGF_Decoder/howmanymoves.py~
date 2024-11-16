@@ -1,0 +1,12 @@
+import os
+from pysgf import SGF
+
+file = os.path.join(os.path.dirname(__file__), "../data/gokifu_GZ_CJ.sgf")
+parsed_sgf = SGF.parse_file(file)
+
+total_moves = 0
+current_node = parsed_sgf
+while current_node.children != []:
+    current_node = current_node.children[0]
+    total_moves += 1
+#print(total_moves)
