@@ -103,7 +103,7 @@ def process(parsed_sgf, totalmoves):
     groups_dict = {"B" : {}, "W" : {}} #e.g. B is dictionary of black groups, e.g. {1:{(15,3)}, ...}
     liberties_dict = {"B" : {}, "W" : {}} #e.g. B is a dictionary of liberties for every B group
 
-    move_limit = random.randint(30, totalmoves)
+    move_limit = random.randint(0, totalmoves)
     
     while move_count <= move_limit:
         #extract nth move

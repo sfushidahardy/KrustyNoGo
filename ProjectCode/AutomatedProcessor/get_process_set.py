@@ -26,19 +26,15 @@ def determine_boardstate(parsed_sgf, result, movecount):
 
 def move_count(parsed_sgf, result):
     global fail
-    global too_few_moves
+    global movecount_error
      #does the file have enough moves? (how many moves does it have?)
     try:
         movecount = howmanymoves.totalmoves(parsed_sgf)
     except:
         fail += 1
-        too_few_moves += 1
+        movecount_error += 1
     else:
-        if movecount <= 30:
-            fail += 1
-            too_few_moves += 1
-        else:
-            determine_boardstate(parsed_sgf, result, movecount) 
+        determine_boardstate(parsed_sgf, result, movecount) 
 
 def winner(parsed_sgf):
     #does the file have a winner?
@@ -90,7 +86,7 @@ success = 0
 fail = 0
 corrupt_file = 0
 indeterminate = 0
-too_few_moves = 0
+movecount_error = 0
 boardstate_error = 0
 progress = 0
 percentage = 0

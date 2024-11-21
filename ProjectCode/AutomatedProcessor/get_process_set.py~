@@ -98,7 +98,7 @@ total = len(os.listdir('./Data'))
 
 # Get the directory path
 cwd = os.getcwd()
-directory_path = os.path.join(cwd, "Data_Test")
+directory_path = os.path.join(cwd, "Data")
 
 # Process the files in the directory
 process_directory(directory_path)
