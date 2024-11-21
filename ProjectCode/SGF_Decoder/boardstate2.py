@@ -91,10 +91,10 @@ groups_dict = {"B" : {}, "W" : {}} #e.g. B is dictionary of black groups, e.g. {
 liberties_dict = {"B" : {}, "W" : {}} #e.g. B is a dictionary of liberties for every B group 
 
 #load and parse data
-file = os.path.join(os.path.dirname(__file__), "../data/gokifu_GZ_CJ.sgf")
+file = os.path.join(os.path.dirname(__file__), "../data/test2.sgf")
 parsed_sgf = SGF.parse_file(file)
 
-while move_count < 240:
+while move_count < 120:
     #extract nth move
     [player, nthmove_coordinates] = nth_move.Nthmove_coordinates(move_count, parsed_sgf)
 

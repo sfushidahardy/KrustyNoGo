@@ -1,0 +1,7 @@
+success: 70108
+fail: 3753
+fail - corrupt file: 1904
+fail - indeterminate game: 1766
+fail - too few moves: 2
+fail - boardstate error: 81
+ 

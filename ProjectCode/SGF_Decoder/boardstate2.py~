@@ -74,10 +74,6 @@ def update_groups_liberties_p1(player, coords):
             if key2 != None:
                 placeholder_liberties.remove(adj_coords) 
     for key in old_id_set:
-        if key == 230:
-            global move_count
-            print(move_count)
-            print(groups_dict[player])
         del groups_dict[player][key]
         del liberties_dict[player][key]
     groups_dict[player][groupid] = placeholder_group
@@ -95,10 +91,10 @@ groups_dict = {"B" : {}, "W" : {}} #e.g. B is dictionary of black groups, e.g. {
 liberties_dict = {"B" : {}, "W" : {}} #e.g. B is a dictionary of liberties for every B group 
 
 #load and parse data
-file = os.path.join(os.path.dirname(__file__), "../data/gokifu_GZ_CJ.sgf")
+file = os.path.join(os.path.dirname(__file__), "../data/test1.sgf")
 parsed_sgf = SGF.parse_file(file)
 
-while move_count < 240:
+while move_count < 120:
     #extract nth move
     [player, nthmove_coordinates] = nth_move.Nthmove_coordinates(move_count, parsed_sgf)
 
