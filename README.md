@@ -24,5 +24,12 @@ The results of processing the data were as follows:
 
 This means 70,117 of the original data were sucessfully converted into a format suitable for ML. Of the failed processes, 1904 failed at the level of parsing the SGF. (This may also be an error on the side of the parser.) Next, 1766 of the parsed game records did not have a labeled winner. The remaining errors are likely due to the SGF files being corrupt, in the sense of not representing a valid game of go, but still parsable.
 
+## /ProjectCode/CNN
+- This directory consists of some neural network models/associated code. The directory *does not* include the following:
+  - Processed data which was fed into the model. (Instead, one can see the automated processor directory.)
+  - The actual trained models. These were too big to upload to github.
+- The files such as cnn.py, cnn2.py, cnn_deeper.py were all trained with various adjustments to architecture and hyperparameters, but the files weren't necessarily duplicated/saved each time.
+- Some training results can be seen in the Results/decisions text file.
+
 ## Other Directories
 The other directories were all for local testing as I incrementally wrote the code.
