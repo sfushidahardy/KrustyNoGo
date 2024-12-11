@@ -1,0 +1,6 @@
+Hi, hopefully you see this while grading.
+
+In the architecture section of my project report, I said "we use a sigmoid activation function because the final outputs are classified into -1 and 1". This is of course nonsense, as using a sigmoid in that case would make all outputs collapse to "1".
+This was simply a typo at the report-level. In the code, specifically
+ProjectCode > CNN > compile_array.py > lines 50 to 53,
+you see that the "Y datasets" were set to 1s and 0s, rather than 1s and -1s. Therefore a sigmoid activation function was correct. 
